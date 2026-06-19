@@ -43,6 +43,12 @@ for p in PAGES:
         continue
     s = open(p, encoding="utf-8").read()
 
+    # 0) normalize the Claude Design ".dc.html" link form to ".html" so a direct
+    #    DesignSync pull (links like advisory-execution.dc.html) is handled the same
+    #    as a zip export (already .html). Only page links carry this; canonical/og
+    #    don't. The next step then strips ".html" to extensionless. Idempotent.
+    s = s.replace(".dc.html", ".html")
+
     # 1) canonical domain: apex -> www (idempotent; covers canonical + og:url + any
     #    absolute self-link, in both the body <helmet> and the injected <head> copy)
     s = s.replace("https://freedom.ai", CANON_HOST)

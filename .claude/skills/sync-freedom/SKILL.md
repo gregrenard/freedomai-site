@@ -11,7 +11,10 @@ contact-form wiring), verify internal links + assets, then push. GitHub Pages re
 the live site automatically (~1 min).
 
 ## Project facts
-- **Source of truth:** Claude Design "Freedom.AI" project, exported as a **`Freedom.AI website review*.zip`** (members under `export/`). There is **no live DesignSync project ID** for this site — content arrives only as the export zip (drop the newest one next to the repo, i.e. in the parent dir).
+- **Source of truth:** Claude Design project **"Freedom.AI website review"**, projectId `34d6780e-4d52-433c-8587-45d682d177b4` (type `PROJECT_TYPE_PROJECT`, READ-ONLY — only `get_project`/`list_files`/`get_file`, never write). Pages live there as `index.dc.html`, `advisory-execution.dc.html`, `ai-lab.dc.html`, `brand.dc.html`.
+- **Two ways to pull content:**
+  1. **DesignSync (preferred for single-page edits):** `DesignSync get_file projectId=34d6780e-… path=<page>.dc.html`, then extract the `content` **byte-exact** from the session JSONL (`~/.claude/projects/<proj>/<session>.jsonl` — find the freshest `get_file` result, json-parse, write to disk as the repo's `<page>.html`). Do NOT hand-retype. `clean-urls.py` normalizes the `.dc.html` links to extensionless.
+  2. **Zip export (full refresh):** drop the newest `Freedom.AI website review*.zip` in the parent dir; `deploy.sh --extract` unpacks `export/*` (already `.html`).
 - **Repo / remote:** `origin/main` → `github.com/gregrenard/freedomai-site` (this working directory).
 - **Live site:** https://www.freedom.ai (custom domain via `CNAME` = `www.freedom.ai`, GitHub Pages; also reachable at https://gregrenard.github.io/freedomai-site). DNS: a `CNAME` record `www` → `gregrenard.github.io`.
 - **Pages (4):** `index.html` (Home/Vision), `advisory-execution.html`, `ai-lab.html`, `brand.html`.
