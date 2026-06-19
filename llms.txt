@@ -1,0 +1,20 @@
+# Freedom.AI
+
+> Freedom.AI is an applied AI venture community and lab — your long-term partner for AI that actually works. It combines advisory and execution for leaders and boards with an applied AI lab that ships production-grade GenAI across cloud, on-premise and edge. Founded by AI architect Gregory Renard.
+
+## What it is
+
+- An applied AI lab building and shipping production GenAI — from rapid prototyping and R&D to on-premise and edge deployment.
+- An advisory and execution practice for executives and boards: AI strategy and operating model, board and executive enablement, roadmap to production, fractional AI leadership.
+- A venture community incubating and supporting applied-AI ventures.
+
+## Pages
+
+- [Home / Vision](https://www.freedom.ai/): Applied AI venture community — overview, offerings, team and contact.
+- [Advisory & Execution](https://www.freedom.ai/advisory-execution): AI strategy, operating model and hands-on execution for leaders and boards architecting AI-native organizations.
+- [AI Lab](https://www.freedom.ai/ai-lab): Rapid prototyping, production GenAI systems, on-premise & edge deployment, and venture incubation.
+- [Brand](https://www.freedom.ai/brand): The Freedom.AI brand mark — the acacia (deep roots, frontier canopy) — logo system, lockups and palette.
+
+## Elsewhere
+
+- [Gregory Renard](https://gregory-renard.com/)

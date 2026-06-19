@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+  <title>AI Lab — Freedom.AI</title>
+  <meta name="description" content="Freedom.AI’s applied AI lab — prototyping and shipping frontier GenAI to production across cloud, on-premise and edge. Agentic systems, on-device SLMs, embedded orchestration.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.freedom.ai/ai-lab">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Freedom.AI">
+  <meta property="og:title" content="AI Lab — Freedom.AI">
+  <meta property="og:description" content="Frontier GenAI shipped to production — agentic systems, SLMs and embedded orchestration, built together with our partners.">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #A9791F; color: #fff; }
+    a { color: inherit; text-decoration: none; }
+  </style>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>AI Lab — Freedom.AI</title>
+  <meta name="description" content="Freedom.AI’s applied AI lab — prototyping and shipping frontier GenAI to production across cloud, on-premise and edge. Agentic systems, on-device SLMs, embedded orchestration.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.freedom.ai/ai-lab">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Freedom.AI">
+  <meta property="og:title" content="AI Lab — Freedom.AI">
+  <meta property="og:description" content="Frontier GenAI shipped to production — agentic systems, SLMs and embedded orchestration, built together with our partners.">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #A9791F; color: #fff; }
+    a { color: inherit; text-decoration: none; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; background:#FBF9F4; color:#1A1814; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:17px; line-height:1.6;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(251,249,244,0.88); backdrop-filter:saturate(1.4) blur(14px); border-bottom:1px solid #E7E1D5;">
+    <div style="max-width:1200px; margin:0 auto; padding:0 32px; height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="./" style="display:flex; align-items:center; gap:11px;">
+        <img src="assets/freedom-acacia.png" alt="Freedom.AI" style="height:34px; width:auto;">
+        <span style="font-size:21px; letter-spacing:-0.02em; font-weight:600;">Freedom<span style="color:#A9791F;">.ai</span></span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:30px; font-size:14px; letter-spacing:0.01em;">
+        <a href="./#vision" style="opacity:0.78;">{{ t.nav_vision }}</a>
+        <a href="./#offerings" style="opacity:0.78;">{{ t.nav_offerings }}</a>
+        <a href="./#community" style="opacity:0.78;">{{ t.nav_community }}</a>
+        <a href="./#team" style="opacity:0.78;">{{ t.nav_team }}</a>
+        <div style="display:flex; align-items:center; border:1px solid #E7E1D5; border-radius:999px; overflow:hidden; font-size:12px; font-weight:600;">
+          <button onClick="{{ setEn }}" style="{{ enStyle }}">EN</button>
+          <button onClick="{{ setFr }}" style="{{ frStyle }}">FR</button>
+        </div>
+        <a href="./#contact" style="padding:9px 18px; border-radius:2px; background:#1A1814; color:#FBF9F4; font-weight:500;">{{ t.nav_cta }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="max-width:1200px; margin:0 auto; padding:84px 32px 56px;">
+    <div style="display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.06em; color:#A9791F;">
+      <span style="width:7px; height:7px; border-radius:50%; background:#A9791F;"></span>{{ t.eyebrow }}
+    </div>
+    <h1 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:clamp(38px,5.2vw,76px); line-height:1.04; letter-spacing:-0.02em; margin:22px 0 0;">{{ t.heroPre }}<span style="color:#A9791F;">{{ t.heroEm }}</span></h1>
+    <p style="font-size:clamp(18px,1.5vw,22px); line-height:1.55; margin:28px 0 0; color:#6F685B;">{{ t.heroSub }}</p>
+    <div style="margin-top:30px; display:inline-flex; align-items:center; gap:10px; background:#0E2C3D; border-radius:5px; padding:12px 18px; font-family:'IBM Plex Mono',monospace; font-size:13.5px; color:#D9AE52;">
+      <span style="color:#6E8A96;">›</span>{{ t.heroTag }}
+    </div>
+  </section>
+
+  <!-- THE RANGE -->
+  <section style="border-top:1px solid #E7E1D5; background:#FFFFFF;">
+    <div style="max-width:1200px; margin:0 auto; padding:80px 32px;">
+      <div style="font-family:'Helvetica Neue',sans-serif; text-transform:uppercase; letter-spacing:0.18em; font-size:12px; color:#A9791F; font-weight:600;">{{ t.rangeKicker }}</div>
+      <h2 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:clamp(28px,3.4vw,48px); letter-spacing:-0.02em; margin:14px 0 0;">{{ t.rangeTitle }}</h2>
+      <p style="margin:16px 0 0; font-size:17px; color:#6F685B; max-width:74ch; line-height:1.55;">{{ t.rangeSub }}</p>
+      <div style="margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#E7E1D5; border:1px solid #E7E1D5;">
+        <sc-for list="{{ range }}" as="r" hint-placeholder-count="3">
+          <div style="background:#FFFFFF; padding:30px 28px; display:flex; flex-direction:column; min-height:210px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#A9791F;">{{ r.label }}</div>
+            <h3 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:20px; letter-spacing:-0.01em; margin:16px 0 0;">{{ r.tag }}</h3>
+            <p style="margin:12px 0 0; font-size:14.5px; line-height:1.55; color:#6F685B;">{{ r.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top:28px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#E7E1D5; border:1px solid #E7E1D5;">
+        <sc-for list="{{ proofs }}" as="p" hint-placeholder-count="4">
+          <div style="background:#FBF9F4; padding:22px 22px;">
+            <div style="font-family:'Spectral',Georgia,serif; font-size:30px; color:#A9791F; line-height:1;">{{ p.k }}</div>
+            <div style="margin-top:7px; font-size:13px; color:#6F685B;">{{ p.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top:28px; background:#0E2C3D; border-radius:5px; padding:16px 20px; font-family:'IBM Plex Mono',monospace; font-size:13.5px; color:#D9AE52;">
+        <span style="color:#6E8A96;">~/freedom.ai ›</span> whoami <span style="color:#6E8A96;">→</span> {{ t.whoami }}
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED ENGAGEMENTS -->
+  <section style="max-width:1200px; margin:0 auto; padding:80px 32px;">
+    <div style="font-family:'Helvetica Neue',sans-serif; text-transform:uppercase; letter-spacing:0.18em; font-size:12px; color:#A9791F; font-weight:600;">{{ t.projectsKicker }}</div>
+    <h2 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:clamp(28px,3.4vw,48px); letter-spacing:-0.02em; margin:14px 0 36px;">{{ t.projectsTitle }}</h2>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px;">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer" style="border:1px solid #E7E1D5; border-radius:2px; background:#FFFFFF; padding:28px; display:flex; flex-direction:column; transition:border-color .3s, transform .3s;" style-hover="border-color:#A9791F; transform:translateY(-3px);">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+            <span style="display:inline-flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:{{ p.color }};"><span style="width:7px; height:7px; border-radius:50%; background:{{ p.color }};"></span>{{ p.status }}</span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A917E;">{{ p.years }}</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:8px; margin-top:18px;">
+            <h3 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0;">{{ p.name }}</h3>
+            <span style="color:#A9791F; font-size:15px;">↗</span>
+          </div>
+          <div style="margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#A9791F; letter-spacing:0.01em;">{{ p.role }}</div>
+          <p style="margin:14px 0 0; font-size:14.5px; line-height:1.55; color:#6F685B; flex:1;">{{ p.desc }}</p>
+          <div style="margin-top:18px; display:flex; flex-wrap:wrap; gap:7px;">
+            <sc-for list="{{ p.tags }}" as="tag" hint-placeholder-count="3">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.04em; color:#6F685B; border:1px solid #E7E1D5; border-radius:999px; padding:4px 10px;">{{ tag }}</span>
+            </sc-for>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <p style="margin:26px 0 0; font-size:15px; line-height:1.6; color:#6F685B; max-width:78ch;">{{ t.note }}</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section style="border-top:1px solid #E7E1D5; background:#FFFFFF;">
+    <div style="max-width:1200px; margin:0 auto; padding:84px 32px;">
+      <div style="font-family:'Helvetica Neue',sans-serif; text-transform:uppercase; letter-spacing:0.18em; font-size:12px; color:#A9791F; font-weight:600;">{{ t.contactLoc }}</div>
+      <h2 style="font-family:'Spectral',Georgia,serif; font-weight:500; font-size:clamp(30px,4vw,60px); line-height:1.05; letter-spacing:-0.025em; margin:18px 0 0; max-width:20ch;">{{ t.contactTitle }}</h2>
+      <a href="./#contact" style="margin-top:30px; display:inline-flex; align-items:center; gap:9px; padding:16px 28px; background:#1A1814; color:#FBF9F4; border-radius:2px; font-weight:500; font-size:16px;">{{ t.contactCta }} <span style="font-size:18px;">→</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid #E7E1D5; background:#FFFFFF;">
+    <div style="max-width:1200px; margin:0 auto; padding:56px 32px; display:grid; grid-template-columns:1.7fr 1fr 1fr; gap:36px;">
+      <div>
+        <a href="./" style="display:flex; align-items:center; gap:10px;"><img src="assets/freedom-acacia.png" alt="" style="height:30px; width:auto;"><span style="font-size:20px; font-weight:600; letter-spacing:-0.02em;">Freedom<span style="color:#A9791F;">.ai</span></span></a>
+        <p style="margin:14px 0 0; font-size:14px; color:#6F685B; max-width:34ch; line-height:1.55;">{{ t.footer_blurb }}</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9A917E;">{{ t.foot_explore }}</div>
+        <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
+          <a href="advisory-execution">Advisory &amp; Execution</a>
+          <a href="ai-lab">AI Lab</a>
+          <a href="./#community">{{ t.nav_community }}</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9A917E;">{{ t.foot_company }}</div>
+        <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
+          <a href="./#vision">{{ t.nav_vision }}</a>
+          <a href="./#team">{{ t.nav_team }}</a>
+          <a href="brand">{{ t.foot_brand }}</a>
+          <a href="./#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #E7E1D5;">
+      <div style="max-width:1200px; margin:0 auto; padding:20px 32px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; font-size:12.5px; color:#6F685B;">
+        <span>{{ t.copyright }}</span>
+        <span>SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:2200}}">
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  COPY = {
+    en: {
+      nav_vision:'Vision', nav_offerings:'Offerings', nav_community:'Community', nav_team:'Team', nav_cta:'Let’s build.',
+      footer_blurb:'Applied artificial intelligence venture community. Advisory, execution and an applied AI lab.', foot_explore:'Offerings', foot_company:'Company', foot_brand:'Brand',
+      eyebrow: 'AI Lab · Work in progress',
+      heroPre: 'Where the next systems ', heroEm: 'get built.',
+      heroSub: "This is where Freedom.AI explores, discovers and builds. Our applied-AI lab pushes frontier GenAI to its edge — agentic systems, on-device SLMs, embedded orchestration — and turns what works into production-grade reality across cloud, on-premise, edge and fully-local infrastructure. Mastery of the technology, pursued with elegance — together with our partners.",
+      heroTag: 'freedom.ai/lab — currently shipping',
+      rangeKicker: 'Collaborative research',
+      rangeTitle: 'Boardroom → Architecture → Terminal.',
+      rangeSub: "Freedom.AI works across all three altitudes — with you, not for you. We embed alongside your teams in a collaborative research mode, from boardroom strategy to system architecture to the code that ships — to build production AI solutions together.",
+      whoami: 'a lab that builds with you.',
+      projectsKicker: 'Selected engagements', projectsTitle: 'What’s on the bench right now',
+      note: 'Through Freedom.AI, Gregory also supports Sodebo, Actual, Agriodor, Groupe IDEA and InjectSense. Some work is under NDA and not shown. For deeper technical references or case studies, get in touch.',
+      contactLoc: 'San Francisco · Paris · Brussels',
+      contactTitle: 'Have a hard AI problem worth building? Let’s talk.',
+      contactCta: 'Let’s build.',
+      copyright: '© 2026 Freedom.AI Consulting LLC'
+    },
+    fr: {
+      nav_vision:'Vision', nav_offerings:'Offres', nav_community:'Communauté', nav_team:'Équipe', nav_cta:'Construisons.',
+      footer_blurb:'Communauté de venture en IA appliquée. Conseil, exécution et un lab d’IA appliquée.', foot_explore:'Offres', foot_company:'Société', foot_brand:'Marque',
+      eyebrow: 'AI Lab · Travaux en cours',
+      heroPre: 'Là où se construisent ', heroEm: 'les prochains systèmes.',
+      heroSub: "C'est ici que Freedom.AI explore, découvre et construit. Notre lab d'IA appliquée pousse la GenAI de pointe dans ses retranchements — systèmes agentiques, SLM on-device, orchestration embarquée — et transforme ce qui fonctionne en réalité de production : cloud, on-premise, edge et infrastructure 100% locale. La maîtrise de la technologie, avec élégance — aux côtés de nos partenaires.",
+      heroTag: 'freedom.ai/lab — en production',
+      rangeKicker: 'Recherche collaborative',
+      rangeTitle: 'Conseil → Architecture → Terminal.',
+      rangeSub: "Freedom.AI couvre les trois altitudes — avec vous, pas à votre place. Nous nous intégrons à vos équipes en mode recherche collaborative, de la stratégie au board à l’architecture système jusqu’au code qui part en production — pour construire ensemble des solutions IA.",
+      whoami: 'un lab qui construit avec vous.',
+      projectsKicker: 'Missions sélectionnées', projectsTitle: 'Ce qu’il y a sur l’établi en ce moment',
+      note: "Via Freedom.AI, Gregory accompagne aussi Sodebo, Actual, Agriodor, Groupe IDEA et InjectSense. Certains travaux sont sous NDA et ne sont pas affichés. Pour des références techniques détaillées ou des études de cas, écrivez-moi.",
+      contactLoc: 'San Francisco · Paris · Bruxelles',
+      contactTitle: 'Un problème d’IA difficile à construire ? Parlons-en.',
+      contactCta: 'Construisons.',
+      copyright: '© 2026 Freedom.AI Consulting LLC'
+    }
+  };
+
+  projData = [
+    { key:'building', name:'Tasks.ai', yEn:'2025 →', yFr:'2025 →', url:'https://tasks.ai/',
+      roleEn:'Founder · Architect · Vibe-Working', roleFr:'Fondateur · Architecte · Vibe-Working',
+      en:'My latest venture in active development — an agentic productivity system that turns intent into executed work. It builds high-level agentic harnesses that automate and emulate the way a person works: teach it once, like training a colleague, and it runs your process hands-free, 24/7. This is Vibe-Working — what Vibe-Coding did for developers, brought to everyone.',
+      fr:"Ma dernière venture en développement actif — un système de productivité agentique qui transforme l'intention en travail exécuté. Il construit des harnais agentiques de haut niveau qui automatisent et émulent la façon de travailler d'un humain : on le forme une fois, comme un collègue, et il exécute votre processus en mains libres, 24/7. C'est le Vibe-Working — ce que le Vibe-Coding a fait pour les développeurs, apporté à tous.",
+      tags:['Vibe-Working','Agentic harnesses','Human emulation'] },
+    { key:'building', name:'Working with Another Intelligence', yEn:'Book · in writing', yFr:'Livre · en écriture', url:'https://www.linkedin.com/in/delbourgdelphis/',
+      roleEn:'Co-author with Marylène Delbourg-Delphis', roleFr:'Co-auteur avec Marylène Delbourg-Delphis',
+      en:'A book in progress with Marylène Delbourg-Delphis — “Humans in the Age of AI Operability.” Why AI initiatives stall inside real organizations, and how companies learn to live, decide and grow alongside a non-human intelligence. Anchored in a live 18-month agentic-AI deployment in a safety-critical industrial group.',
+      fr:"Un livre en cours avec Marylène Delbourg-Delphis — « Humans in the Age of AI Operability ». Pourquoi les initiatives IA calent dans les organisations réelles, et comment les entreprises apprennent à vivre, décider et croître aux côtés d'une intelligence non humaine. Ancré dans un déploiement d'IA agentique réel de 18 mois au sein d'un groupe industriel critique.",
+      tags:['AI Operability','Agentic AI','Org. cognition'] },
+    { key:'active', name:'Bright.AI', yEn:'2026 →', yFr:'2026 →', url:'https://www.bright.ai/',
+      roleEn:'Physical AI · embedded edge orchestration', roleFr:'Physical AI · orchestration embarquée sur l’edge',
+      en:'Physical AI. I own the entire embedded orchestration on the edge — running SLMs directly on NPUs for real-time, on-device intelligence with no cloud dependency.',
+      fr:"Physical AI. Je porte toute l'orchestration embarquée sur l'edge — des SLMs exécutés directement sur NPU pour une intelligence temps réel, on-device, sans dépendance au cloud.",
+      tags:['Physical AI','Edge · NPU','SLMs'] },
+    { key:'active', name:'ConsentPlace', yEn:'2022 →', yFr:'2022 →', url:'https://consentplace.com/',
+      roleEn:'Architect of the entire AI technology', roleFr:'Architecte de toute la technologie IA',
+      en:'Designed and built the full AI technology stack for this privacy & consent-management platform — from data pipelines to NLP-driven compliance automation.',
+      fr:"Conception et construction de toute la stack technologique IA de cette plateforme de gestion du consentement et de la vie privée — des pipelines de données à l'automatisation de conformité par NLP.",
+      tags:['Privacy tech','NLP','Compliance AI'] },
+    { key:'active', name:'Eiffage Group', yEn:'2024 →', yFr:'2024 →', url:'https://www.eiffage.com/',
+      roleEn:'Applied AI advisory · via Freedom.AI', roleFr:'Conseil IA appliquée · via Freedom.AI',
+      en:'Applied AI advisory for a global construction & infrastructure leader — bringing GenAI and agentic systems into enterprise operations, from strategy to deployment.',
+      fr:"Conseil en IA appliquée pour un leader mondial de la construction & des infrastructures — amener la GenAI et les systèmes agentiques dans les opérations de l'entreprise, de la stratégie au déploiement.",
+      tags:['Enterprise AI','Construction','Advisory'] },
+    { key:'active', name:'Everyone.AI · SRL4Children', yEn:'2024 →', yFr:'2024 →', url:'https://everyone.ai/aia-safety-builder/',
+      roleEn:'Co-founder · agentic AI-safety engine', roleFr:'Co-fondateur · moteur agentique de sécurité IA',
+      en:'Now public as the AïA Safety Builder — recognized a Tech-for-Change startup at VivaTech Paris 2026. SRL4Children is the agentic execution and assessment engine behind it, running large-scale behavioral evaluation and safety scoring of conversational AI to protect children, going beyond content moderation to developmental behavioral risk.',
+      fr:"Désormais public sous le nom d'AïA Safety Builder — startup « Tech for Change » distinguée à VivaTech Paris 2026. SRL4Children en est le moteur agentique d'exécution et d'évaluation : évaluation comportementale et scoring de sécurité à grande échelle des IA conversationnelles pour protéger les enfants, au-delà de la modération de contenu, jusqu'au risque comportemental développemental.",
+      tags:['AI for good','AI safety','Agentic AI'] },
+    { key:'active', name:'Injectsense', yEn:'2025 →', yFr:'2025 →', url:'https://www.injectsense.com',
+      roleEn:'Applied-AI advisor · GenAI transformation · alongside Yann LeCun (research AI)', roleFr:'Conseiller IA appliquée · transformation GenAI · aux côtés de Yann LeCun (IA de recherche)',
+      en:'Applied-AI advisor for this Silicon Valley deep-tech building ultra-miniature implantable sensors for digital health. I led the GenAI transformation of the company — within a year the team became GenAI-native, with spectacular first-level results. Yann LeCun advises on the research-AI side.',
+      fr:"Conseiller IA appliquée pour cette deep-tech de la Silicon Valley qui développe des capteurs implantables ultra-miniatures pour la santé numérique. J'ai piloté la transformation GenAI de l'entreprise — en un an, l'équipe est devenue GenAI-native, avec des résultats spectaculaires au premier niveau. Yann LeCun conseille la partie IA de recherche.",
+      tags:['Applied AI','GenAI transformation','Digital health'] },
+    { key:'research', name:'NASA · SETI · FDL', yEn:'2016 →', yFr:'2016 →', url:'https://frontierdevelopmentlab.org/',
+      roleEn:'AI Technical Committee · research mentor', roleFr:'Comité technique IA · mentor de recherche',
+      en:'Founding member of the FDL Technical Committee — applying NLP, Knowledge Graphs and LLMs to space and earth science, from H₂-discovery engines to NASA-wide knowledge graphs.',
+      fr:"Membre fondateur du comité technique du FDL — NLP, graphes de connaissances et LLM appliqués aux sciences spatiales et terrestres, des moteurs de découverte d'H₂ aux graphes de connaissances de la NASA.",
+      tags:['Knowledge Graphs','NLP','Space science'] },
+    { key:'completed', name:'Docugami', yEn:'2024', yFr:'2024', url:'https://www.docugami.com/',
+      roleEn:'Head of Applied ML → Applied AI Fellow (advising)', roleFr:'Head of Applied ML → Applied AI Fellow (conseil)',
+      en:'Built large-scale sequential & hybrid agentic workflows — agents executing up to 100,000 open-source LLM calls per iteration (Llama 3.1–3.3, Phi, Gemma, Qwen). I remain close to the team as the company moves through its acquisition.',
+      fr:"Construction de workflows agentiques séquentiels & hybrides à grande échelle — des agents exécutant jusqu'à 100 000 appels LLM open-source par itération (Llama 3.1–3.3, Phi, Gemma, Qwen). Je reste proche de l'équipe dans le cadre du rachat de la société.",
+      tags:['Agentic workflows','Open-source LLMs','MLOps'] },
+    { key:'completed', name:'Opus (ex-AAICO)', yEn:'2021–2024', yFr:'2021–2024', url:'https://www.opus.com/',
+      roleEn:'AI architect · document pipelines & infrastructure', roleFr:'Architecte IA · pipelines & infrastructure documentaire',
+      en:'Set up the full AI pipelines at AAICO (now Opus) — introducing zero-shot learning, then LLMs. Built the first infrastructure able to process 1B+ documents per client, and were the first to handle medical PDFs of 55,000+ pages.',
+      fr:"Mise en place de l'ensemble des pipelines IA chez AAICO (devenu Opus) — introduction du zero-shot learning, puis des LLM. Première infrastructure capable de traiter plus d'1 milliard de documents par client, et premiers à traiter des PDF médicaux de plus de 55 000 pages.",
+      tags:['Document AI','ZSL → LLMs','1B+ docs/client'] },
+    { key:'completed', name:'Renault Group', yEn:'2025', yFr:'2025', url:'https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/',
+      roleEn:'Architect of the in-car AI agent', roleFr:'Architecte de l’agent IA embarqué dans la voiture',
+      en:'Designed the architecture of Renault’s in-car AI agent: a voice assistant running on a small on-device model with cloud fallback, controlling 100+ vehicle functions, games and more through MCP — even sensing the driver’s emotions, with real-time voice disambiguation.',
+      fr:"Conception de l’architecture de l’agent IA embarqué dans la voiture : un assistant vocal tournant sur un petit modèle on-device avec repli cloud, pilotant 100+ fonctions du véhicule, des jeux et plus via MCP — capable aussi de percevoir les émotions du conducteur, avec désambiguïsation vocale en temps réel.",
+      tags:['In-car voice AI','Edge SLM + cloud','MCP · 100+ functions'] },
+    { key:'completed', name:'xBrain', yEn:'2011–2021', yFr:'2011–2021', url:'https://www.youtube.com/watch?v=sx7HSGFAxzA',
+      roleEn:'Founder · CAIO · Lead AI Architect (NLP)', roleFr:'Fondateur · CAIO · Architecte IA principal (NLP)',
+      en:'The conversational platform that pioneered modern dialog systems. Founder and lead AI architect of xBrain — an on-premise + cloud natural-dialog platform for automotive, customer service, IoT and robotics, with trademarked innovations (Deep Context, Dynamic Disambiguation, Intent Learning, Natural Dialog, Voice2Text) built years ahead of the market. Engineered across Lille, Paris and Silicon Valley; acquired by Augustus Intelligence (NYC) in 2020.',
+      fr:"Plateforme conversationnelle pionnière des systèmes de dialogue modernes. Fondateur et architecte IA principal de xBrain — une plateforme de dialogue naturel on-premise + cloud pour l’automobile, le service client, l’IoT et la robotique, avec des innovations déposées (Deep Context, Désambiguïsation dynamique, Intent Learning, Natural Dialog, Voice2Text) conçues des années avant le marché. Développée entre Lille, Paris et la Silicon Valley ; rachetée par Augustus Intelligence (NYC) en 2020.",
+      tags:['Conversational AI','Voice · IoT · Robotics','Acquired 2020'] }
+  ];
+
+  ST = {
+    building:  { en:'BUILDING',  fr:'EN COURS',  color:'#2A6FDB' },
+    active:    { en:'ACTIVE',    fr:'ACTIF',     color:'#1F8A5B' },
+    research:  { en:'RESEARCH',  fr:'RECHERCHE', color:'#A9791F' },
+    completed: { en:'COMPLETED', fr:'TERMINÉ',   color:'#8A8275' }
+  };
+
+  rangeData = {
+    en: [
+      { label:'BOARDROOM · VISION', tag:'Strategy, co-defined', desc:'We sit with your board and exec team to set AI strategy together — co-defining where AI creates real leverage, and where it doesn’t.' },
+      { label:'ARCHITECTURE', tag:'Designed with your engineers', desc:'We design the end-to-end system alongside your people — data pipelines, agentic orchestration, MLOps and grounded reasoning.' },
+      { label:'TERMINAL · BUILD', tag:'Shipped together', desc:'We write production code with your team — agentic workflows, frugal on-prem / edge / local AI, hands-on with Claude Code.' }
+    ],
+    fr: [
+      { label:'CONSEIL · VISION', tag:'Une stratégie co-définie', desc:"Nous nous asseyons avec votre board et votre comex pour fixer la stratégie IA ensemble — co-définir où l’IA crée un vrai levier, et où elle n’en crée pas." },
+      { label:'ARCHITECTURE', tag:'Conçue avec vos ingénieurs', desc:"Nous concevons le système de bout en bout aux côtés de vos équipes — pipelines de données, orchestration agentique, MLOps et raisonnement ancré." },
+      { label:'TERMINAL · BUILD', tag:'Livré ensemble', desc:"Nous écrivons le code de production avec votre équipe — workflows agentiques, IA frugale on-prem / edge / local, à la main avec Claude Code." }
+    ]
+  };
+
+  proofData = {
+    en: [ {k:'1B+',v:'docs/year — AAICO'}, {k:'100K',v:'LLM calls/iteration — Docugami'}, {k:'€300M+',v:'revenue platform — Oscaro'}, {k:'350M+',v:'downloads — Magma Mobile'} ],
+    fr: [ {k:'1Md+',v:'docs/an — AAICO'}, {k:'100K',v:'appels LLM/itération — Docugami'}, {k:'300M€+',v:'plateforme CA — Oscaro'}, {k:'350M+',v:'téléchargements — Magma Mobile'} ]
+  };
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = this.COPY[lang] || this.COPY.en;
+    const order = { building:0, active:1, research:2, completed:3 };
+    const projects = this.projData.slice()
+      .sort((a,b) => (order[a.key]-order[b.key]) || a.name.localeCompare(b.name, undefined, {sensitivity:'base'}))
+      .map(p => ({
+        name:p.name, url:p.url, tags:p.tags,
+        years: lang==='fr'?p.yFr:p.yEn,
+        role: lang==='fr'?p.roleFr:p.roleEn,
+        desc: lang==='fr'?p.fr:p.en,
+        status: this.ST[p.key][lang], color: this.ST[p.key].color
+      }));
+    const btn = (a) => `border:none; background:${a?'#1A1814':'transparent'}; color:${a?'#FBF9F4':'#6F685B'}; padding:6px 11px; cursor:pointer; font:inherit; font-size:12px; font-weight:600;`;
+    return {
+      t, projects, range: this.rangeData[lang], proofs: this.proofData[lang],
+      enStyle: btn(lang==='en'), frStyle: btn(lang==='fr'),
+      setEn: () => this.setState({lang:'en'}), setFr: () => this.setState({lang:'fr'}),
+    };
+  }
+}
+</script>
+</body>
+</html>
