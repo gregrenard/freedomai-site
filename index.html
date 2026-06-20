@@ -361,7 +361,7 @@ class Component extends DCLogic {
     const f = this.state.form;
     if (this.SHEET_ENDPOINT) {
       this.setState({ sending: true });
-      const body = new URLSearchParams({ firstName:f.first, lastName:f.last, email:f.email, message:f.msg, source:'freedom.ai' });
+      const body = new URLSearchParams({ firstName:f.first, lastName:f.last, email:f.email, message:f.msg, source:'FreedomAI' });
       fetch(this.SHEET_ENDPOINT, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body })
         .then(() => this.setState({ sent:true, sending:false }))
         .catch(() => this.setState({ sent:true, sending:false }));
