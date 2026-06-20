@@ -63,6 +63,12 @@ for p in PAGES:
     for a, b in LINK_SUBS:
         s = s.replace(a, b)
 
+    # 2b) wire the RealChange partner link — Claude Design ships it as a "#"
+    #     placeholder; point it at the partner's site (new tab). Idempotent + only
+    #     matches the anchor whose text is "RealChange", so other "#" links are safe.
+    s = re.sub(r'(<a )href="#"([^>]*>RealChange)',
+               r'\1href="https://www.realchange.com" target="_blank" rel="noopener noreferrer"\2', s)
+
     # 3) static lang (idempotent: '<html>' is gone once it's '<html lang=...>')
     s = s.replace("<html>", '<html lang="en">', 1)
 
