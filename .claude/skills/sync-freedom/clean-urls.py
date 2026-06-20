@@ -69,6 +69,13 @@ for p in PAGES:
     s = re.sub(r'(<a )href="#"([^>]*>RealChange)',
                r'\1href="https://www.realchange.com" target="_blank" rel="noopener noreferrer"\2', s)
 
+    # 2c) make the RealChange® logo (wordmark <div>) clickable to the same site.
+    #     Guard makes it idempotent (skip if already wrapped).
+    rc_wrap = '<a href="https://www.realchange.com" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-decoration:none;">'
+    if rc_wrap + "<div" not in s:
+        s = re.sub(r'(<div[^>]*>RealChange<sup[^>]*>®</sup></div>)',
+                   rc_wrap + r'\1</a>', s, count=1)
+
     # 3) static lang (idempotent: '<html>' is gone once it's '<html lang=...>')
     s = s.replace("<html>", '<html lang="en">', 1)
 
