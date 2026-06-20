@@ -43,6 +43,12 @@ for p in PAGES:
         continue
     s = open(p, encoding="utf-8").read()
 
+    # 0a) strip Claude Design preview/serve URL prefixes so an exported absolute link
+    #     (e.g. the contact CTA exported as
+    #      https://<id>.claudeusercontent.com/v1/design/projects/<id>/serve/index.dc.html#contact)
+    #     collapses to a bare relative link, which the steps below then clean. Idempotent.
+    s = re.sub(r'https://[a-z0-9-]+\.claudeusercontent\.com/v1/design/projects/[^/]+/serve/', '', s)
+
     # 0) normalize the Claude Design ".dc.html" link form to ".html" so a direct
     #    DesignSync pull (links like advisory-execution.dc.html) is handled the same
     #    as a zip export (already .html). Only page links carry this; canonical/og
