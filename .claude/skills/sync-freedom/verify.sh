@@ -49,6 +49,18 @@ if grep -rn 'href="https://freedom\.ai' $PAGES >/dev/null 2>&1; then
   echo "  BAD: apex canonical/og still present (should be https://www.freedom.ai)"; fail=1
 else echo "  ok: all absolute self-URLs on www.freedom.ai"; fi
 
+echo "--- (h) rich-preview SEO present on every page (og:image, twitter, favicon) ---"
+for f in $PAGES; do
+  h=$(awk 'BEGIN{p=1}/<body/{p=0}{if(p)print}' "$f")
+  miss=""
+  echo "$h" | grep -q 'og:image' || miss="$miss og:image"
+  echo "$h" | grep -q 'twitter:card' || miss="$miss twitter:card"
+  echo "$h" | grep -q 'rel="icon"' || miss="$miss favicon"
+  [ -z "$miss" ] && echo "  ok: $f" || { echo "  MISS$miss : $f"; fail=1; }
+done
+grep -q 'application/ld+json' index.html && echo "  ok: JSON-LD on home" || { echo "  MISS: JSON-LD on home"; fail=1; }
+for a in assets/og-cover.png assets/favicon.png; do [ -f "$a" ] && echo "  ok: $a" || { echo "  MISS: $a"; fail=1; }; done
+
 echo
 [ $fail -eq 0 ] && echo "VERIFY: all checks passed ✅" || echo "VERIFY: FAILURES above ❌"
 exit $fail

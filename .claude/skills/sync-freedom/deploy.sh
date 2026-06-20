@@ -29,6 +29,9 @@ python3 "$SKILL_DIR/wire-contact-form.py"
 echo "==> 2  clean URLs + static SEO head + lang"
 python3 "$SKILL_DIR/clean-urls.py"
 
+echo "==> 2b augment SEO (og:image/url, twitter card, favicon, JSON-LD)"
+python3 "$SKILL_DIR/augment-seo.py"
+
 echo "==> 3  bump sitemap <lastmod> to today"
 TODAY="$(date +%F)"
 sed -i '' "s|<lastmod>[^<]*</lastmod>|<lastmod>$TODAY</lastmod>|g" sitemap.xml
