@@ -131,8 +131,8 @@
   </header>
 
   <!-- ============ HERO ============ -->
-  <section id="top" style="position:relative; overflow:hidden; max-width:1200px; margin:0 auto; padding:104px 32px 88px;">
-    <div style="position:absolute; right:73px; top:50%; transform:translateY(calc(-50% - 22px)); width:268px; height:268px; border-radius:50%; pointer-events:none; z-index:0; background:radial-gradient(circle at 42% 36%, #0F3142 0%, #0A2533 62%, #07202C 100%); border:1px solid rgba(205,160,71,0.8); outline:1px solid rgba(205,160,71,0.22); outline-offset:8px; box-shadow:0 26px 54px -26px rgba(0,0,0,0.45); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+  <section id="top" style="position:relative; overflow:hidden; max-width:1200px; margin:0 auto; padding:104px 32px 60px;">
+    <div style="position:absolute; right:73px; top:50%; transform:translateY(calc(-50% - 118px)); width:268px; height:268px; border-radius:50%; pointer-events:none; z-index:0; background:radial-gradient(circle at 42% 36%, #0F3142 0%, #0A2533 62%, #07202C 100%); border:1px solid rgba(205,160,71,0.8); outline:1px solid rgba(205,160,71,0.22); outline-offset:8px; box-shadow:0 26px 54px -26px rgba(0,0,0,0.45); display:flex; flex-direction:column; align-items:center; justify-content:center;">
       <img src="assets/freedom-acacia.png" alt="" style="height:152px; width:auto;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.42em; text-transform:uppercase; color:#D9AE52; margin-top:4px; padding-left:0.42em;">Freedom.AI</div>
     </div>
@@ -140,22 +140,16 @@
     <div style="display:flex; align-items:center; gap:12px; font-family:var(--label,'Helvetica Neue',sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:12px; color:var(--accent,#A9791F); font-weight:600;">
       <span style="width:26px; height:1px; background:var(--accent,#A9791F);"></span>{{ t.hero_eyebrow }}
     </div>
-    <h1 style="font-family:var(--display,'Spectral',Georgia,serif); font-weight:500; font-size:clamp(30px,3.6vw,54px); line-height:1.08; letter-spacing:-0.02em; margin:22px 0 0; max-width:17ch;">{{ t.hero_title }}</h1>
+    <h1 style="font-family:var(--display,'Spectral',Georgia,serif); font-weight:500; font-size:clamp(30px,3.6vw,54px); line-height:1.08; letter-spacing:-0.02em; margin:22px 0 0; max-width:24ch;">{{ t.hero_title }}<br>{{ t.hero_title2 }}<br><span style="color:var(--accent,#A9791F);">{{ t.hero_title_accent }}</span></h1>
     <p style="font-size:clamp(18px,1.5vw,22px); line-height:1.55; max-width:60ch; margin:30px 0 0; color:var(--muted,#6F685B);">{{ t.hero_sub }}</p>
     <div style="margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; gap:16px;">
       <a href="#contact" style="display:inline-flex; align-items:center; gap:9px; padding:15px 26px; background:var(--ink,#1A1814); color:var(--bg,#FBF9F4); border-radius:var(--radius,2px); font-weight:500; font-size:15px;">{{ t.hero_cta1 }} <span style="font-size:17px;">→</span></a>
-      <a href="#offerings" style="display:inline-flex; align-items:center; gap:9px; padding:15px 22px; border:1px solid var(--ink,#1A1814); border-radius:var(--radius,2px); font-weight:500; font-size:15px;">{{ t.hero_cta2 }}</a>
-      <span style="margin-left:6px; font-family:var(--label,sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:11px; color:var(--accent,#A9791F); font-weight:600;">{{ t.hero_tag }}</span>
+      <a href="#proof" style="display:inline-flex; align-items:center; gap:9px; padding:15px 22px; border:1px solid var(--ink,#1A1814); border-radius:var(--radius,2px); font-weight:500; font-size:15px;">{{ t.hero_cta2 }}</a>
+      <a href="#offerings" style="display:inline-flex; align-items:center; gap:7px; font-weight:500; font-size:15px; color:var(--muted,#6F685B); border-bottom:1px solid var(--line,#E7E1D5); padding-bottom:3px;" style-hover="color:var(--accent,#A9791F); border-color:var(--accent,#A9791F);">{{ t.hero_cta3 }} <span style="font-size:16px;">→</span></a>
     </div>
-    <div style="margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line,#E7E1D5); border:1px solid var(--line,#E7E1D5); max-width:640px; border-radius:var(--radius,2px); overflow:hidden;">
-      <a href="advisory-execution" style="background:var(--surface,#FFFFFF); padding:20px 22px; display:flex; flex-direction:column; gap:7px; transition:background .25s;" style-hover="background:#FBF6EC;">
-        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--accent,#A9791F);">01 · Applied AI Advisory &amp; Execution</span>
-        <span style="font-size:14px; line-height:1.42; color:var(--muted,#6F685B);">{{ t.hero_pillar_adv }}</span>
-      </a>
-      <a href="ai-lab" style="background:var(--surface,#FFFFFF); padding:20px 22px; display:flex; flex-direction:column; gap:7px; transition:background .25s;" style-hover="background:#FBF6EC;">
-        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--accent,#A9791F);">02 · AI Lab</span>
-        <span style="font-size:14px; line-height:1.42; color:var(--muted,#6F685B);">{{ t.hero_pillar_lab }}</span>
-      </a>
+    <div style="margin-top:30px; padding-top:22px; border-top:1px solid var(--line,#E7E1D5); display:flex; align-items:center; gap:14px; max-width:680px;">
+      <div style="width:46px; height:46px; border-radius:50%; background:#0A2533; border:1px solid rgba(205,160,71,0.7); flex-shrink:0; display:flex; align-items:center; justify-content:center; color:#D9AE52; font-family:var(--display,'Spectral',Georgia,serif); font-size:18px;">GR</div>
+      <div style="font-size:14px; line-height:1.5; color:var(--ink,#1A1814);"><a href="https://www.gregory-renard.com" target="_blank" rel="noopener noreferrer" style="color:var(--ink,#1A1814); border-bottom:1px solid var(--accent,#A9791F); padding-bottom:1px;" style-hover="color:var(--accent,#A9791F);"><strong>{{ t.hero_founder_lead }}</strong></a><span style="color:var(--muted,#6F685B);"> — {{ t.hero_founder_rest }}</span><span style="color:var(--accent,#A9791F);">{{ t.hero_founder_award }}</span></div>
     </div>
     <div style="margin-top:40px; padding-top:24px; border-top:1px solid var(--line,#E7E1D5); display:flex; flex-wrap:wrap; gap:28px 56px; align-items:center; font-size:13.5px; color:var(--muted,#6F685B);">
       <span style="font-family:var(--label,sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:11px; font-weight:600;">{{ t.hero_reach }}</span>
@@ -165,14 +159,27 @@
     </div>
   </section>
 
-  <!-- ============ CREDENTIALS ============ -->
-  <section style="border-top:1px solid var(--line,#E7E1D5); background:var(--surface,#FFFFFF);">
-    <div style="max-width:1200px; margin:0 auto; padding:26px 32px; display:flex; flex-wrap:wrap; align-items:center; gap:20px 44px;">
-      <span style="font-family:var(--label,sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:11px; font-weight:600; color:var(--ink,#1A1814);">{{ t.cred_label }}</span>
-      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 30px; margin-left:auto;">
-        <sc-for list="{{ creds }}" as="c" hint-placeholder-count="4">
-          <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.06em; color:var(--muted,#6F685B);">{{ c }}</span>
+  <!-- ============ PROOF ============ -->
+  <section id="proof" style="border-top:1px solid var(--line,#E7E1D5); background:var(--surface,#FFFFFF);">
+    <div style="max-width:1200px; margin:0 auto; padding:56px 32px;">
+      <div style="font-family:var(--label,sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:12px; color:var(--accent,#A9791F); font-weight:600;">{{ t.proof_kicker }}</div>
+      <div style="margin-top:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line,#E7E1D5); border:1px solid var(--line,#E7E1D5);">
+        <sc-for list="{{ proofMetrics }}" as="mx" hint-placeholder-count="4">
+          <div style="background:var(--surface,#FFFFFF); padding:28px 26px;">
+            <div style="font-family:var(--display,'Spectral',Georgia,serif); font-size:clamp(34px,3.4vw,46px); line-height:1; letter-spacing:-0.02em; color:var(--ink,#1A1814);">{{ mx.v }}</div>
+            <div style="margin-top:12px; font-size:14px; line-height:1.45; color:var(--muted,#6F685B);">{{ mx.d }}</div>
+          </div>
         </sc-for>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line,#E7E1D5); background:var(--bg,#FBF9F4);">
+      <div style="max-width:1200px; margin:0 auto; padding:22px 32px; display:flex; flex-wrap:wrap; align-items:center; gap:18px 40px;">
+        <span style="font-family:var(--label,sans-serif); text-transform:var(--lt,uppercase); letter-spacing:var(--ls,0.18em); font-size:11px; font-weight:600; color:var(--ink,#1A1814);">{{ t.proof_trusted }}</span>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 36px; margin-left:auto;">
+          <sc-for list="{{ proofLogos }}" as="lg" hint-placeholder-count="8">
+            <span style="font-family:var(--display,'Spectral',Georgia,serif); font-size:16px; color:#4A4439;">{{ lg }}</span>
+          </sc-for>
+        </div>
       </div>
     </div>
   </section>
@@ -239,6 +246,21 @@
             <p style="margin:0; font-size:14.5px; line-height:1.5; color:var(--muted,#6F685B);">{{ s.d }}</p>
           </div>
         </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUICK START CTA ============ -->
+  <section style="border-top:1px solid var(--line,#E7E1D5); background:#15130F; color:#FBF9F4;">
+    <div style="max-width:1200px; margin:0 auto; padding:60px 32px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:32px;">
+      <div style="max-width:56ch;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent,#A9791F);">{{ t.qs_kicker }}</div>
+        <h2 style="font-family:var(--display,'Spectral',Georgia,serif); font-weight:500; font-size:clamp(28px,3.2vw,40px); line-height:1.1; letter-spacing:-0.02em; margin:14px 0 0;">{{ t.qs_title }}</h2>
+        <p style="font-size:16px; line-height:1.6; color:#C9C2B4; margin:14px 0 0;">{{ t.qs_sub }}</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+        <a href="#contact" style="display:inline-flex; align-items:center; gap:9px; padding:15px 26px; background:#FBF9F4; color:#1A1814; border-radius:var(--radius,2px); font-weight:600; font-size:15px;">{{ t.qs_cta }} <span style="font-size:17px;">→</span></a>
+        <a href="mailto:contact@freedom.ai" style="font-size:13px; color:#8C8475;">{{ t.qs_or }}</a>
       </div>
     </div>
   </section>
@@ -450,12 +472,19 @@ class Component extends DCLogic {
     en: {
       nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Community', nav_team:'Team', nav_contact:'Let’s build.',
       hero_eyebrow:'Applied AI venture community',
-      hero_title:'Your long-term partner for AI that actually works.',
-      hero_sub:'For organizations that know AI matters but aren’t sure where to start. We sit on your side of the table — from strategy to systems shipped in production — and leave your teams autonomous, not dependent.',
+      hero_title:'Most enterprise AI',
+      hero_title2:'never reaches production.',
+      hero_title_accent:'Ours does.',
+      hero_sub:'We sit on your side of the table — from strategy to systems shipped in production — and leave your teams autonomous, not dependent. No hype. No endless POCs.',
       hero_tag:'No hype. No endless POCs.',
+      hero_founder_lead:'Led by Gregory Renard', hero_founder_rest:'Founder · AI-native since 1996 · ', hero_founder_award:'NASA FDL Applied AI Award of Merit',
+      proof_kicker:'Proof', proof_trusted:'Trusted by',
+      proofMetrics:[{v:'−40%',d:'processing time on a production claims workflow'},{v:'12 wks',d:'from kickoff to first system live in production'},{v:'30+',d:'ventures & enterprise programs built alongside'},{v:'1996',d:'AI-native — three decades of applied delivery'}],
+      proofLogos:['Bright.AI','ConsentPlace','Docugami','Eiffage Group','Injectsense','NASA · FDL','Renault Group','Sodebo'],
+      qs_kicker:'Quick start', qs_title:'Book a 30-minute call.', qs_sub:'No form to fill. Pick a slot, tell us where you are with AI, and we’ll tell you honestly what it takes to get to production.', qs_cta:'Book a 30-min call', qs_or:'or email contact@freedom.ai',
       hero_pillar_adv:'Strategy & hands-on execution for leaders and boards.',
       hero_pillar_lab:'Frontier GenAI, prototyped and shipped to production.',
-      hero_cta1:'Start a conversation', hero_cta2:'Explore the offerings', hero_reach:'Reach us',
+      hero_cta1:'Book a 30-min call', hero_cta2:'See client results', hero_cta3:'Explore the offerings', hero_reach:'Reach us',
       cred_label:'AI-native since 1996', creds:['NASA','SETI','FDL.AI','U.S. DOE'],
       quote_kicker:'Conviction',
       quote_l1:'Good news: AI isn’t going to replace you.', quote_l2:'Bad news: a person who uses AI will.', quote_l3:'One thing is certain — talent will matter even more.',
@@ -514,12 +543,19 @@ class Component extends DCLogic {
     fr: {
       nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Communauté', nav_team:'Équipe', nav_contact:'Construisons.',
       hero_eyebrow:'Communauté de venture en IA appliquée',
-      hero_title:'Votre partenaire long terme pour une IA qui marche vraiment.',
-      hero_sub:'Pour les organisations qui savent que l’IA compte mais ne savent pas par où commencer. Nous nous plaçons de votre côté de la table — de la stratégie aux systèmes mis en production — et rendons vos équipes autonomes, pas dépendantes.',
+      hero_title:'La plupart des IA d’entreprise',
+      hero_title2:'n’atteignent jamais la production.',
+      hero_title_accent:'La nôtre, si.',
+      hero_sub:'Nous sommes de votre côté de la table — de la stratégie aux systèmes mis en production — et nous laissons vos équipes autonomes, pas dépendantes. Pas de hype. Pas de POCs sans fin.',
       hero_tag:'Pas de hype. Pas de POCs sans fin.',
+      hero_founder_lead:'Dirigé par Gregory Renard', hero_founder_rest:'Fondateur · IA-native depuis 1996 · ', hero_founder_award:'NASA FDL Applied AI Award of Merit',
+      proof_kicker:'Preuve', proof_trusted:'Ils nous font confiance',
+      proofMetrics:[{v:'−40%',d:'de temps de traitement sur un workflow en production'},{v:'12 sem.',d:'du lancement au premier système en production'},{v:'30+',d:'ventures & programmes d’entreprise menés ensemble'},{v:'1996',d:'IA-native — trois décennies de delivery appliqué'}],
+      proofLogos:['Bright.AI','ConsentPlace','Docugami','Eiffage Group','Injectsense','NASA · FDL','Renault Group','Sodebo'],
+      qs_kicker:'Démarrage rapide', qs_title:'Réservez un appel de 30 minutes.', qs_sub:'Aucun formulaire à remplir. Choisissez un créneau, dites-nous où vous en êtes avec l’IA, et nous vous dirons honnêtement ce qu’il faut pour atteindre la production.', qs_cta:'Réserver un appel de 30 min', qs_or:'ou écrivez à contact@freedom.ai',
       hero_pillar_adv:'Stratégie & exécution concrète pour dirigeants et conseils.',
       hero_pillar_lab:'GenAI de pointe, prototypée et mise en production.',
-      hero_cta1:'Démarrer la conversation', hero_cta2:'Découvrir les offres', hero_reach:'Nous joindre',
+      hero_cta1:'Réserver un appel de 30 min', hero_cta2:'Voir les résultats clients', hero_cta3:'Découvrir les offres', hero_reach:'Nous joindre',
       cred_label:'AI-native depuis 1996', creds:['NASA','SETI','FDL.AI','U.S. DOE'],
       quote_kicker:'Conviction',
       quote_l1:'Good news: AI isn’t going to replace you.', quote_l2:'Bad news: a person who uses AI will.', quote_l3:'One thing is certain — talent will matter even more.',
@@ -589,6 +625,7 @@ class Component extends DCLogic {
       t, rootStyle,
       themeName: th.name,
       principles: t.principles, offers: t.offers, steps: t.steps, members: t.members, footerCols: t.footerCols,
+      proofMetrics: t.proofMetrics, proofLogos: t.proofLogos,
       enBtnStyle: langBtn(this.state.lang === 'en'),
       frBtnStyle: langBtn(this.state.lang === 'fr'),
       dirAStyle: dirBtn(this.state.theme === 'A'),
