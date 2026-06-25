@@ -104,9 +104,10 @@
         <img src="assets/freedom-acacia.png" alt="Freedom.AI" style="height:34px; width:auto;">
         <span style="font-size:21px; letter-spacing:-0.02em; font-weight:600;">Freedom<span style="color:var(--accent,#A9791F);">.ai</span></span>
       </a>
-      <nav style="display:flex; align-items:center; gap:30px; font-size:14px; letter-spacing:0.01em;">
+      <nav style="display:flex; align-items:center; gap:24px; font-size:14px; letter-spacing:0.01em;">
         <a href="#vision" style="opacity:0.78;">{{ t.nav_vision }}</a>
-        <a href="#offerings" style="opacity:0.78;">{{ t.nav_offerings }}</a>
+        <a href="advisory-execution" style="opacity:0.78;">{{ t.nav_advisory }}</a>
+        <a href="ai-lab" style="opacity:0.78;">{{ t.nav_ailab }}</a>
         <a href="#community" style="opacity:0.78;">{{ t.nav_community }}</a>
         <a href="#team" style="opacity:0.78;">{{ t.nav_team }}</a>
         <div style="display:flex; align-items:center; border:1px solid var(--line,#E7E1D5); border-radius:999px; overflow:hidden; font-size:12px; font-weight:600; letter-spacing:0.04em; flex-shrink:0;">
@@ -120,7 +121,8 @@
     <div class="mob-menu" style="{{ mobMenuStyle }}">
       <div style="display:flex; flex-direction:column; gap:0; padding:6px 18px 18px;">
         <a href="#vision" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_vision }}</a>
-        <a href="#offerings" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_offerings }}</a>
+        <a href="advisory-execution" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_advisory }}</a>
+        <a href="ai-lab" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_ailab }}</a>
         <a href="#community" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_community }}</a>
         <a href="#team" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid var(--line,#E7E1D5);">{{ t.nav_team }}</a>
         <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:16px; text-align:center; padding:14px 18px; border-radius:var(--radius,2px); background:var(--ink,#1A1814); color:var(--bg,#FBF9F4); font-weight:500;">{{ t.nav_contact }}</a>
@@ -391,6 +393,21 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
 class Component extends DCLogic {
   state = { lang: 'en', theme: 'A', form: { first:'', last:'', email:'', msg:'' }, sent:false, sending:false, mobOpen:false };
+  componentDidMount(){
+    const id = (window.location.hash || '').replace('#','');
+    if(!id) return;
+    let tries = 0;
+    const jump = () => {
+      const el = document.getElementById(id);
+      if(el){
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 72;
+        window.scrollTo(0, y);
+      } else if(tries++ < 40){
+        requestAnimationFrame(jump);
+      }
+    };
+    requestAnimationFrame(jump);
+  }
 
   // ▼▼ Coller ici l'URL du Google Apps Script (…/exec) qui écrit dans le Sheet.
   //    Laisser vide = fallback vers mailto:contact@freedom.ai
@@ -431,7 +448,7 @@ class Component extends DCLogic {
 
   COPY = {
     en: {
-      nav_vision:'Vision', nav_offerings:'Offerings', nav_community:'Community', nav_team:'Team', nav_contact:'Let’s build.',
+      nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Community', nav_team:'Team', nav_contact:'Let’s build.',
       hero_eyebrow:'Applied AI venture community',
       hero_title:'Your long-term partner for AI that actually works.',
       hero_sub:'For organizations that know AI matters but aren’t sure where to start. We sit on your side of the table — from strategy to systems shipped in production — and leave your teams autonomous, not dependent.',
@@ -495,7 +512,7 @@ class Component extends DCLogic {
       ],
     },
     fr: {
-      nav_vision:'Vision', nav_offerings:'Offres', nav_community:'Communauté', nav_team:'Équipe', nav_contact:'Construisons.',
+      nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Communauté', nav_team:'Équipe', nav_contact:'Construisons.',
       hero_eyebrow:'Communauté de venture en IA appliquée',
       hero_title:'Votre partenaire long terme pour une IA qui marche vraiment.',
       hero_sub:'Pour les organisations qui savent que l’IA compte mais ne savent pas par où commencer. Nous nous plaçons de votre côté de la table — de la stratégie aux systèmes mis en production — et rendons vos équipes autonomes, pas dépendantes.',

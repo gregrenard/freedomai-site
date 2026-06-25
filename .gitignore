@@ -32,3 +32,6 @@ node_modules/
 
 # Exports Claude Design (source de sync, non déployés)
 *.zip
+
+# Dossiers de travail locaux (changelogs, notes, brouillons) — non déployés
+.works/

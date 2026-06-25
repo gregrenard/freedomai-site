@@ -90,9 +90,10 @@
         <img src="assets/freedom-acacia.png" alt="Freedom.AI" style="height:34px; width:auto;">
         <span style="font-size:21px; letter-spacing:-0.02em; font-weight:600;">Freedom<span style="color:#A9791F;">.ai</span></span>
       </a>
-      <nav style="display:flex; align-items:center; gap:30px; font-size:14px; letter-spacing:0.01em;">
+      <nav style="display:flex; align-items:center; gap:24px; font-size:14px; letter-spacing:0.01em;">
         <a href="./#vision" style="opacity:0.78;">{{ t.nav_vision }}</a>
-        <a href="./#offerings" style="opacity:0.78;">{{ t.nav_offerings }}</a>
+        <a href="advisory-execution" style="opacity:0.78;">{{ t.nav_advisory }}</a>
+        <a href="ai-lab" style="opacity:1; font-weight:500;">{{ t.nav_ailab }}</a>
         <a href="./#community" style="opacity:0.78;">{{ t.nav_community }}</a>
         <a href="./#team" style="opacity:0.78;">{{ t.nav_team }}</a>
         <div style="display:flex; align-items:center; border:1px solid #E7E1D5; border-radius:999px; overflow:hidden; font-size:12px; font-weight:600; flex-shrink:0;">
@@ -106,7 +107,8 @@
     <div class="mob-menu" style="{{ mobMenuStyle }}">
       <div style="display:flex; flex-direction:column; gap:0; padding:6px 18px 18px;">
         <a href="./#vision" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5;">{{ t.nav_vision }}</a>
-        <a href="./#offerings" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5;">{{ t.nav_offerings }}</a>
+        <a href="advisory-execution" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5;">{{ t.nav_advisory }}</a>
+        <a href="ai-lab" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5; font-weight:500;">{{ t.nav_ailab }}</a>
         <a href="./#community" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5;">{{ t.nav_community }}</a>
         <a href="./#team" onClick="{{ closeMenu }}" style="padding:14px 2px; font-size:17px; border-bottom:1px solid #E7E1D5;">{{ t.nav_team }}</a>
         <a href="./#contact" onClick="{{ closeMenu }}" style="margin-top:16px; text-align:center; padding:14px 18px; border-radius:2px; background:#1A1814; color:#FBF9F4; font-weight:500;">{{ t.nav_cta }}</a>
@@ -232,7 +234,7 @@ class Component extends DCLogic {
   state = { lang: 'en', mobOpen: false };
   COPY = {
     en: {
-      nav_vision:'Vision', nav_offerings:'Offerings', nav_community:'Community', nav_team:'Team', nav_cta:'Let’s build.',
+      nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Community', nav_team:'Team', nav_cta:'Let’s build.',
       footer_blurb:'Applied artificial intelligence venture community. Advisory, execution and an applied AI lab.', foot_explore:'Offerings', foot_company:'Company', foot_brand:'Brand',
       eyebrow: 'AI Lab · Work in progress',
       heroPre: 'Where the next systems ', heroEm: 'get built.',
@@ -250,7 +252,7 @@ class Component extends DCLogic {
       copyright: '© 2026 Freedom.AI Consulting LLC'
     },
     fr: {
-      nav_vision:'Vision', nav_offerings:'Offres', nav_community:'Communauté', nav_team:'Équipe', nav_cta:'Construisons.',
+      nav_vision:'Vision', nav_advisory:'Advisory & Execution', nav_ailab:'AI Lab', nav_community:'Communauté', nav_team:'Équipe', nav_cta:'Construisons.',
       footer_blurb:'Communauté de venture en IA appliquée. Conseil, exécution et un lab d’IA appliquée.', foot_explore:'Offres', foot_company:'Société', foot_brand:'Marque',
       eyebrow: 'AI Lab · Travaux en cours',
       heroPre: 'Là où se construisent ', heroEm: 'les prochains systèmes.',
